@@ -109,7 +109,7 @@ class LayoutProcessor extends \Magento\Framework\View\Element\AbstractBlock impl
                     'component' => 'Experius_Postcode/js/view/form/postcode',
                     'type' => 'group',
                     'config' => [
-                        "customerScope" => $scope,
+                        "customeScope" => $scope,
                         "template" => 'Experius_Postcode/form/group',
                         "additionalClasses" => "experius_postcode_fieldset",
                         "loaderImageHref" => $this->getViewFileUrl('images/loader-1.gif')
@@ -129,7 +129,7 @@ class LayoutProcessor extends \Magento\Framework\View\Element\AbstractBlock impl
                     [
                         'component' => 'Magento_Ui/js/form/element/abstract',
                         'config' => [
-                            "customerScope" => $scope,
+                            "customScope" => $scope,
                             "template" => 'ui/form/field',
                             "elementTmpl" => 'ui/form/element/input',
                             "additionalClasses" => "validate-postcode-housenumber-combination"
@@ -139,8 +139,8 @@ class LayoutProcessor extends \Magento\Framework\View\Element\AbstractBlock impl
                         'label' => __('Postcode'),
                         'sortOrder' => '915',
                         'validation' => [
-                            'required-entry' => 1,
-                            'validate-postcode-housenumber-combination' => 1
+                            'required-entry' => true,
+                            'validate-postcode-housenumber-combination' => true
                         ],
                         'addressType'=> $addressType
                     ],
@@ -148,7 +148,7 @@ class LayoutProcessor extends \Magento\Framework\View\Element\AbstractBlock impl
                     [
                         'component' => 'Magento_Ui/js/form/element/abstract',
                         'config' => [
-                            "customerScope" => $scope,
+                            "customScope" => $scope,
                             "template" => 'ui/form/field',
                             "elementTmpl" => 'ui/form/element/input',
                             "additionalClasses" => "validate-postcode-housenumber-combination"
@@ -158,8 +158,8 @@ class LayoutProcessor extends \Magento\Framework\View\Element\AbstractBlock impl
                         'label' => __('Housenumber'),
                         'sortOrder' => '925',
                         'validation' => [
-                            'required-entry' => 1,
-                            'validate-postcode-housenumber-combination' => 1
+                            'required-entry' => true,
+                            'validate-postcode-housenumber-combination' => true
                         ],
                         'addressType'=> $addressType
                     ],
@@ -167,7 +167,7 @@ class LayoutProcessor extends \Magento\Framework\View\Element\AbstractBlock impl
                     [
                         'component' => 'Magento_Ui/js/form/element/select',
                         'config' => [
-                            "customerScope" => $scope,
+                            "customScope" => $scope,
                             "template" => 'ui/form/field',
                             "elementTmpl" => 'ui/form/element/select',
                             "additionalClasses" => "validate-postcode-housenumber-combination"
@@ -178,7 +178,7 @@ class LayoutProcessor extends \Magento\Framework\View\Element\AbstractBlock impl
                         'sortOrder' => '927',
                         'validation' => [
                             'required-entry' => false,
-                            'validate-postcode-housenumber-combination' => 1
+                            'validate-postcode-housenumber-combination' => true
                         ],
                         'options' => [],
                         'visible' => false,
@@ -188,7 +188,7 @@ class LayoutProcessor extends \Magento\Framework\View\Element\AbstractBlock impl
                     [
                         'component' => 'Magento_Ui/js/form/element/abstract',
                         'config' => [
-                            "customerScope" => $scope,
+                            "customScope" => $scope,
                             "template" => 'ui/form/field',
                             "elementTmpl" => 'ui/form/element/checkbox'
                         ],

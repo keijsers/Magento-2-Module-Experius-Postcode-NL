@@ -1,13 +1,20 @@
 define([
-    "jquery",
-    "experius_postcode", // Custom knockout view model
-    'jquery/validate',
-    "validation",
-    "mage/translate"
-], function($,experiusPostcode) {
-    "use strict";
+    'jquery',
+    'Magento_Ui/js/lib/validation/validator',
+    'uiRegistry',
+    'experius_postcode'
+], function ($, validator, uiRegistry, postcode) {
+    'use strict';
 
-    $.validator.addMethod('validate-postcode-housenumber-combination', function (value) {
-    }, $.mage.__('No address could be found.'));
+    return function (target) {
 
+        validator.addRule(
+            'validate-postcode-housenumber-combination',
+            function (value, params) {
+                return false;
+            }, $.mage.__('Enter Your message here')
+        );
+
+        return target;
+    };
 });
